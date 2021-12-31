@@ -301,3 +301,16 @@ lista.previousSibling //node acima
 
 lista.firstChild //primeiro node child 
 lista.childNodes // todos os nodes child
+
+/**
+ * Manipulando elementos
+ * é possivel mover elementos no dom com métodos de Node
+ */
+const lista = document.querySelector('.animais-lista')
+const contato = document.querySelector('.contato')
+const titulo = document.querySelector('.titulo')
+
+contato.appendChild(lista) //move lista para o final de Contato
+contato.insertBefore(lista, titulo) //insere a lista antes de titulo
+contato.removeChild(titulo) //remove titulo de Contato
+contato.replaceChild(lista, titulo) //substitui titulo por lista
