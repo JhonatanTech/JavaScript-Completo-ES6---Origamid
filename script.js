@@ -314,3 +314,30 @@ contato.appendChild(lista) //move lista para o final de Contato
 contato.insertBefore(lista, titulo) //insere a lista antes de titulo
 contato.removeChild(titulo) //remove titulo de Contato
 contato.replaceChild(lista, titulo) //substitui titulo por lista
+
+/**
+ * Novos elementos
+ * Podermos criar novos elementos com o método createElement()
+ */
+
+const animais = document.querySelector('.animais');
+
+const novoH1 = document.querySelector('h1') //cria elemento
+novoH1.innerText = 'Novo titulo' //da um texto para o elemento
+novoH1.classList.add('titulo') //add uma nova classe a este elemento criado
+
+contato.appendChild(novoH1) //adiciona o elemento ao final de contato
+
+/**
+ * Clonar elementos
+ * Todo elemento selecionado é único. Para criarmos um novo elemento baseado no anterior, é necessario usar o método cloneNode()
+ */
+const titutlo = document.querySelector('h1')
+const titulo2 = document.querySelector('h1')
+const novoTitulo = titulo
+//titulo, titulo2 e novoTitulo são iguais
+
+const cloneTitulo = titulo.cloneNode(true) //ele clona o elemento, sem movelo
+//true sinaliza para incluir os filhos
+const contato = document.querySelector('.contato')
+contato.appendChild(cloneTitulo)
